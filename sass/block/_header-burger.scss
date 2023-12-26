@@ -1,0 +1,142 @@
+.nav__burger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: 23px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background-color: #212733;
+        transition: all 0.5s;
+
+        &:nth-of-type(2) {
+            width: 30px;
+            top: calc(50% - 12px);
+        }
+
+        &:nth-of-type(3) {
+            width: 16px;
+            top: calc(50% + 12px);
+        }
+    }
+
+     /* Меняем гамбургер иконку, когда меню открыто */
+    &.active span:nth-of-type(1) {
+        display: none;
+    }
+    &.active span:nth-of-type(2) {
+        width: 30px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg); 
+        background: rgba(255, 255, 255, 0.3); 
+    }
+    &.active span:nth-of-type(3) {
+        width: 30px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg); 
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.span--white {
+    background-color: #fff !important;
+}
+
+
+.nav__menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 35%;
+    background: #191A1E;
+    transform: translateX(100%);
+    transition: transform 0.5s; 
+    padding: 120px 80px 60px;
+    min-height: 100vh;
+
+    &.active {
+        transform: translateX(0px);
+    }
+
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin-bottom: 150px;
+
+        li {
+            a {
+                color: rgba(255, 255, 255, 0.3);
+                transition: color .2s ease-in;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            &:last-of-type > a {
+                color: #fff;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 172px;
+                    height: 1px;
+                    background-color: #fff;
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                }
+            }
+           
+        }
+    }
+
+    .header__menu-btn {
+        width: 280px;
+        background: linear-gradient(90deg, #074D88 0%, #61B3C9 100%);
+        color: #fff;
+        column-gap: 69px;
+        padding: 20px 24px 20px 30px;
+        margin-bottom: 130px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-image: url(../img/header/arrow-white.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .header__menu-social {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        a {
+            transition: all .2s ease-in;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        a:active {
+            opacity: 1;
+        }
+    }
+
+}

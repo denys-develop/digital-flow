@@ -1,0 +1,137 @@
+.footer {
+    background-color: #17181C;
+    padding: 103px 0;
+}
+
+.footer__row {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 40px;
+
+    border-bottom: 1px solid #595959;
+}
+
+.footer__menu {
+    width: 266px;
+}
+
+.footer__menu-item {
+  
+    &:nth-child(1) {
+        font-size: 20px;
+        line-height: 1.2;
+        color: #FFFFFF;
+        margin-bottom: 33px;
+    }
+
+    &:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    &:nth-child(3) {
+        margin-bottom: 20px;
+    }
+
+    &:nth-child(4) {
+        margin-bottom: 45px;
+    }
+}
+
+.footer__menu-link {
+    color: #E6E6E6;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+}
+
+.footer__menu-tel {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(..//img/footer/footer-tel.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+.footer__menu-mail {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(..//img/footer/footer-mail.svg);
+        background-repeat: no-repeat;
+    }
+
+   
+}
+
+.footer__menu-location {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(..//img/footer/footer-location.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+.footer__icons {
+    padding-top: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+.footer__menu-social {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+ 
+
+    a {
+        transition: all .3s ease-in-out;
+        
+        &:hover {
+            opacity: 0.7;
+        }
+    
+        &:active  {
+            opacity: 1;
+        }
+    }
+    
+   
+}

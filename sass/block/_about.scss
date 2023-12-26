@@ -1,0 +1,59 @@
+.about {
+    background: #F1F1F1;
+    padding: 268px 0;
+}
+
+.about__row {
+    display: flex;
+}
+
+.about__left {
+    width: 50%;
+
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 960px;
+        height: 940px;
+        background-image: url(..//img/about/about.jpg);
+        
+        position: absolute;
+        top: -268px;
+        left: -325px;
+        z-index: -10;
+    }
+}
+
+.about__rigth {
+    width: 50%;
+    text-align: right;
+    margin-left: auto;
+    padding-left: 100px;
+
+    position: relative;
+}
+
+.about__content {
+    width: 500px;    
+}
+
+.about__title {
+    margin-bottom: 60px;
+}
+
+.about__text {
+    color: #494949;
+
+    p + p {
+        margin-top: 40px;
+    }
+}
+
+.about__dots {
+    position: absolute;
+    top: 120px;
+    right: -200px;
+}

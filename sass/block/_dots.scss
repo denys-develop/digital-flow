@@ -1,0 +1,19 @@
+.dots {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    span {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #313035;
+        
+        &:nth-child(2) {
+            border: 2px solid #8D8C92;
+            background-color: transparent;
+        }
+    }
+  
+}
